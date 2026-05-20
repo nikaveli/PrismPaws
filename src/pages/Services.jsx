@@ -73,11 +73,12 @@ export default function Services() {
       </section>
 
       {/* SERVICES — three blocks */}
-      <section className="services-list">
+      <section className="services-list" id="services">
         {SERVICES.map((svc, i) => (
           <div
             className={`svc-block ${i % 2 === 1 ? 'reverse' : ''}`}
             key={svc.title}
+            id={svc.anchor}
           >
             <div className={`svc-photo-wrap ${svc.color} gsap-scale`}>
               <span className="svc-photo-tag">{svc.tag}</span>
@@ -187,7 +188,7 @@ export default function Services() {
       </section>
 
       {/* FAQ */}
-      <section className="faq-section">
+      <section className="faq-section" id="faq">
         <div className="container tc">
           <div className="eyebrow center gsap-up">Common Questions</div>
           <h2 className="section-h gsap-up">Everything You <em>Need To Know</em></h2>
@@ -227,6 +228,7 @@ function Faq({ items }) {
 
 const SERVICES = [
   {
+    anchor: 'in-home',
     title: 'We Come To Them.',
     eyebrow: 'In-Home Pet Sitting',
     color: 'purple',
@@ -243,6 +245,7 @@ const SERVICES = [
     includes: ['Routine respected', 'Feed + meds', 'Photo/video updates', 'Door locked twice'],
   },
   {
+    anchor: 'drop-ins',
     title: 'Quick. Focused. Never Rushed.',
     eyebrow: 'Drop-In Visits',
     color: 'blue',
@@ -258,6 +261,7 @@ const SERVICES = [
     includes: ['Food + water', 'Litter scoop', 'Cuddles included', 'Photo updates'],
   },
   {
+    anchor: 'walks',
     title: 'Their Pace. Their Route. Their Way.',
     eyebrow: 'Dog Walks',
     color: 'orange',
@@ -273,6 +277,7 @@ const SERVICES = [
     includes: ['Leash-positive', 'Paw wipe', 'Fresh water', 'Temperament matched'],
   },
   {
+    anchor: 'enrichment',
     title: 'For The Pets Who Need More.',
     eyebrow: 'Enrichment & TLC',
     color: 'green',

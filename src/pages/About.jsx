@@ -167,7 +167,7 @@ export default function About() {
       </section>
 
       {/* PROCESS / HOW WE WORK */}
-      <section className="process-section">
+      <section className="process-section" id="approach">
         <div className="container tc">
           <div className="eyebrow center gsap-up">How We Actually Work</div>
           <h2 className="section-h gsap-up">It's Not Just That The Dog <em>Got Walked.</em></h2>

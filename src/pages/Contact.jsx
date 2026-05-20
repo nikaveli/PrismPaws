@@ -310,7 +310,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section className="faq-section">
+      <section className="faq-section" id="faq">
         <div className="container tc">
           <div className="eyebrow center gsap-up">Quick Answers</div>
           <h2 className="section-h gsap-up">Common Booking <em>Questions</em></h2>

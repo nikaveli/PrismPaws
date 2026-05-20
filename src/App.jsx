@@ -8,8 +8,28 @@ import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 
 export default function App() {
-  const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    // If the destination has a hash (e.g. /services#bundles), wait for the
+    // page to render then scroll the target into view. Otherwise scroll top.
+    if (hash) {
+      // Two animation frames: gives React + GSAP a chance to lay out the
+      // section before we measure its position.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const el = document.querySelector(hash);
+          if (el) {
+            const top = el.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top, behavior: 'smooth' });
+          } else {
+            window.scrollTo(0, 0);
+          }
+        });
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
 
   return (
     <>
