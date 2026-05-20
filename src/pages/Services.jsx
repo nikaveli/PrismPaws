@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
+import HeroVideoLoop from '../components/HeroVideoLoop.jsx';
 
 export default function Services() {
   const scope = useRef(null);
 
   useGsapPage(scope, () => {
+    gsap.fromTo('.hero-logo',
+      { opacity: 0, y: 30, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'back.out(1.6)' },
+    );
     gsap.fromTo('.subpage-hero h1 .word',
       { opacity: 0, y: 60, rotate: 4 },
-      { opacity: 1, y: 0, rotate: 0, duration: 0.9, stagger: 0.07, ease: 'power3.out', delay: 0.2 },
+      { opacity: 1, y: 0, rotate: 0, duration: 0.9, stagger: 0.07, ease: 'power3.out', delay: 0.35 },
     );
     gsap.fromTo('.subpage-hero p',
       { opacity: 0, y: 30 },
@@ -34,18 +39,10 @@ export default function Services() {
     <main ref={scope}>
       {/* HERO — full-bleed video */}
       <section className="subpage-hero subpage-hero-video">
-        <video
-          className="hero-bg-video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster="/assets/images/blue_eye_dog.png"
-          src="/assets/video/hero.mp4"
-        />
+        <HeroVideoLoop src="/assets/video/hero.mp4" crossfadeSeconds={1} />
         <div className="hero-bg-tint" />
         <div className="subpage-hero-inner">
+          <img className="hero-logo hero-logo-light" src="/assets/images/PRISM_PAWS_LOGO.png" alt="Prism Paws Pet Care" />
           <span className="hero-pill" style={{ marginInline: 'auto' }}>
             <span className="pulse"></span> Now Booking · Denver + Surrounding Areas
           </span>

@@ -15,7 +15,8 @@ export default function Home() {
       { opacity: 0, y: 60, rotate: 6 },
       { opacity: 1, y: 0, rotate: 0, duration: 0.9, stagger: 0.08, ease: 'power3.out', delay: 0.2 },
     );
-    gsap.fromTo('.hero-pill', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, delay: 0.1, ease: 'power2.out' });
+    gsap.fromTo('.hero-logo', { opacity: 0, y: 30, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.9, delay: 0, ease: 'back.out(1.6)' });
+    gsap.fromTo('.hero-pill', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, delay: 0.25, ease: 'power2.out' });
     gsap.fromTo('.hero-sub', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, delay: 0.9, ease: 'power2.out' });
     gsap.fromTo('.hero-actions', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, delay: 1.05, ease: 'power2.out' });
     gsap.fromTo('.hero-trust', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, delay: 1.2, ease: 'power2.out' });
@@ -32,6 +33,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-inner">
           <div className="hero-left">
+            <img className="hero-logo" src="/assets/images/PRISM_PAWS_LOGO.png" alt="Prism Paws Pet Care" />
             <div className="hero-pill"><span className="pulse"></span> Now Booking · Denver + Surrounding Areas</div>
             <h1>
               {HERO_WORDS.map((w, i) => (

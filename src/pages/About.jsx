@@ -8,9 +8,13 @@ export default function About() {
   const scope = useRef(null);
 
   useGsapPage(scope, () => {
+    gsap.fromTo('.hero-logo',
+      { opacity: 0, y: 30, scale: 0.9 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: 'back.out(1.6)' },
+    );
     gsap.fromTo('.subpage-hero h1 .word',
       { opacity: 0, y: 60, rotate: 4 },
-      { opacity: 1, y: 0, rotate: 0, duration: 0.9, stagger: 0.07, ease: 'power3.out', delay: 0.2 },
+      { opacity: 1, y: 0, rotate: 0, duration: 0.9, stagger: 0.07, ease: 'power3.out', delay: 0.35 },
     );
     gsap.fromTo('.subpage-hero p',
       { opacity: 0, y: 30 },
@@ -53,6 +57,7 @@ export default function About() {
         <span className="floating-paw" style={{ top: '20%', right: '12%' }}>🐾</span>
         <span className="floating-paw" style={{ top: '78%', right: '8%' }}>🐾</span>
         <div className="subpage-hero-inner">
+          <img className="hero-logo" src="/assets/images/PRISM_PAWS_LOGO.png" alt="Prism Paws Pet Care" />
           <div className="eyebrow center">Meet Prism Paws</div>
           <h1>
             <span className="word">The</span> <span className="word">sitter</span> <span className="word">your</span> <span className="word">pet</span><br />
