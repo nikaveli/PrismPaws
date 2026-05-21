@@ -240,6 +240,8 @@ const SERVICES = [
     photo: '/assets/images/chewy_1.png',
     copy: "Keeping pets in their own home means less stress, better behavior, and actual sleep — for everyone. Ideal for cats who hate boarding, dogs with separation anxiety, senior pets on strict routines, or multi-pet households where a kennel just isn't realistic.",
     tiers: [
+      { name: 'Half-Day Companion Care', duration: 'Up to 4 hrs', price: '$95' },
+      { name: 'Full-Day Companion Care', duration: 'Up to 8 hrs', price: '$175' },
       { name: 'Overnight Stay', duration: '7pm–7am', price: '$95–$110' },
       { name: 'Extended Overnight', duration: 'Early arrival', price: '$125–$145' },
       { name: '24-Hour Care', duration: 'Full day + night', price: '$175–$225' },
