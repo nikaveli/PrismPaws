@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
+import Seo from '../components/Seo.jsx';
 
 const SERVICE_OPTIONS = [
   'In-Home Sit',
@@ -76,6 +77,11 @@ export default function Contact() {
 
   return (
     <main ref={scope}>
+      <Seo
+        title="Book a Pet Sitter | Free Meet & Greet"
+        description="Book a free meet & greet with Prism Paws Pet Care in Denver, CO. Same-day response guaranteed. Call/text (720) 289-1134 or DM @PrismPawsPetCare."
+        path="/contact"
+      />
       {/* HERO */}
       <section className="subpage-hero">
         <span className="floating-paw" style={{ top: '20%', left: '8%' }}>🐾</span>
@@ -302,7 +308,7 @@ export default function Contact() {
               </div>
               <div className="ps-number">{String(i + 1).padStart(2, '0')}</div>
               <div className="ps-image">
-                <img src={s.photo} alt={s.title} />
+                <img src={s.photo} alt={s.alt || s.title} />
               </div>
             </div>
           ))}
@@ -351,16 +357,19 @@ function ContactFaq({ items }) {
 const FLOW = [
   {
     title: 'Reach Out',
+    alt: 'Grey cat waiting at home while owner contacts Prism Paws Pet Care in Denver',
     desc: 'Send a DM, drop a note, or text us. Tell us about your pet — routine, quirks, medical needs, the works. We answer the same day.',
     photo: '/assets/images/grey_cat.png',
   },
   {
     title: 'Free Meet & Greet',
+    alt: 'Pitbull mix meeting a Prism Paws pet sitter for the first time at a free meet and greet in Denver',
     desc: "We come to you — no charge, no commitment. Your pet decides if we're a fit. Honestly the most important step.",
     photo: '/assets/images/pitbull_full_body.png',
   },
   {
     title: 'First Visit On The Calendar',
+    alt: 'White Labrador ready for its first scheduled visit with Prism Paws Pet Care in Denver',
     desc: "Once your pet approves us, we lock in the routine — feeding times, meds, walk preferences — and the first booking is on the books. Photo updates start that day.",
     photo: '/assets/images/White_lab.png',
   },

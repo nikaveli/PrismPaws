@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
 import HeroVideoLoop from '../components/HeroVideoLoop.jsx';
+import Seo from '../components/Seo.jsx';
 
 export default function Services() {
   const scope = useRef(null);
@@ -29,14 +30,15 @@ export default function Services() {
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.8, delay: 1.15, ease: 'power2.out' },
     );
-    gsap.fromTo('.subpage-hero .floating-paw',
-      { opacity: 0, scale: 0.4, rotate: -20 },
-      { opacity: 0.18, scale: 1, rotate: 0, duration: 1, stagger: 0.1, delay: 0.4, ease: 'back.out(2)' },
-    );
   });
 
   return (
     <main ref={scope}>
+      <Seo
+        title="Pet Care Services & Pricing | Denver"
+        description="All pet care services & pricing — overnight stays ($95–$225), dog walks ($32–$52), drop-in visits ($25–$52), enrichment & monthly bundles. Serving Denver, CO."
+        path="/services"
+      />
       {/* HERO — full-bleed video */}
       <section className="subpage-hero subpage-hero-video">
         <HeroVideoLoop src="/assets/video/hero.mp4" crossfadeSeconds={1} />
@@ -83,7 +85,7 @@ export default function Services() {
             <div className={`svc-photo-wrap ${svc.color} gsap-scale`}>
               <span className="svc-photo-tag">{svc.tag}</span>
               <span className="svc-photo-emoji">{svc.emoji}</span>
-              <img src={svc.photo} alt={svc.title} />
+              <img src={svc.photo} alt={svc.alt || svc.title} />
             </div>
             <div className="svc-content gsap-up">
               <div className="eyebrow">{svc.eyebrow}</div>
@@ -230,6 +232,7 @@ const SERVICES = [
   {
     anchor: 'in-home',
     title: 'We Come To Them.',
+    alt: 'White Labrador standing calmly at home during an overnight in-home pet sitting visit in Denver',
     eyebrow: 'In-Home Pet Sitting',
     color: 'purple',
     tag: 'In-Home Sit',
@@ -246,6 +249,7 @@ const SERVICES = [
   {
     anchor: 'drop-ins',
     title: 'Quick. Focused. Never Rushed.',
+    alt: 'Striped tabby cat relaxing during a drop-in visit with Prism Paws Pet Care in Denver',
     eyebrow: 'Drop-In Visits',
     color: 'blue',
     tag: 'Drop-In',
@@ -263,6 +267,7 @@ const SERVICES = [
   {
     anchor: 'walks',
     title: 'Their Pace. Their Route. Their Way.',
+    alt: 'Collie playing with a ball during a dog walking session with Prism Paws Pet Care in Denver',
     eyebrow: 'Dog Walks',
     color: 'orange',
     tag: 'Dog Walk',
@@ -279,6 +284,7 @@ const SERVICES = [
   {
     anchor: 'enrichment',
     title: 'For The Pets Who Need More.',
+    alt: 'Pitbull enjoying an enrichment and TLC session with Prism Paws Pet Care in Denver',
     eyebrow: 'Enrichment & TLC',
     color: 'green',
     tag: 'Enrichment',

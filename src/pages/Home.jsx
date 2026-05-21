@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
+import Seo from '../components/Seo.jsx';
 
 const HERO_WORDS = ['Your', "Pet's", 'New', 'Favorite'];
 
@@ -29,6 +30,11 @@ export default function Home() {
 
   return (
     <main ref={scope}>
+      <Seo
+        title="Pet Sitting & Dog Walking Denver, CO"
+        description="Concierge-level in-home pet sitting, dog walks & drop-in visits in Denver, CO. Insured, background-checked & pet-obsessed. Book a free meet & greet today."
+        path="/"
+      />
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner">
@@ -56,11 +62,11 @@ export default function Home() {
 
           <div className="hero-visual">
             <div className="hero-photo-frame">
-              <img className="hero-photo" src="/assets/images/blue_eye_dog.png" alt="Featured pup" />
+              <img className="hero-photo" src="/assets/images/blue_eye_dog.png" alt="Happy dog with blue eyes enjoying in-home pet care in Denver" />
             </div>
 
             <div className="hero-mini-card top">
-              <img src="/assets/images/grey_cat.png" alt="" />
+              <img src="/assets/images/grey_cat.png" alt="Grey cat during a drop-in visit" />
               <div className="hero-mini-card-text">
                 <strong>Miso · Cat sit</strong>
                 <span>Today 2pm · 30 min</span>
@@ -95,7 +101,7 @@ export default function Home() {
       <section className="feature-row">
         <div className="feature-grid">
           <div className="feature-card gsap-up">
-            <img className="fc-photo" src="/assets/images/lab_dog.png" alt="" />
+            <img className="fc-photo" src="/assets/images/lab_dog.png" alt="Yellow lab dog receiving in-home pet care in Denver" />
             <div className="fc-content">
               <h3>Learn How We Care For Your Pet</h3>
               <p>Every visit follows your pet's routine. We adapt to feeding times, meds, walks and personality.</p>
@@ -116,7 +122,7 @@ export default function Home() {
           </div>
 
           <div className="feature-card gsap-up">
-            <img className="fc-photo" src="/assets/images/grey_cat_body.png" alt="" />
+            <img className="fc-photo" src="/assets/images/grey_cat_body.png" alt="Grey cat receiving medication during a drop-in visit" />
             <div className="fc-content">
               <h3>Basic Nutrition &amp; Med Care</h3>
               <p>Meds, oral or injectable, given on schedule with a confirmation photo every time.</p>
@@ -153,8 +159,8 @@ export default function Home() {
             </ul>
           </div>
           <div className="serve-photos gsap-right">
-            <div className="serve-photo p1"><img src="/assets/images/Mekyla_white_dog.png" alt="" /></div>
-            <div className="serve-photo p2"><img src="/assets/images/pitbull.png" alt="" /></div>
+            <div className="serve-photo p1"><img src="/assets/images/Mekyla_white_dog.png" alt="Prism Paws sitter with a white dog during an in-home pet sitting visit" /></div>
+            <div className="serve-photo p2"><img src="/assets/images/pitbull.png" alt="Pitbull mix on a dog walk in Denver with Prism Paws Pet Care" /></div>
           </div>
         </div>
       </section>
@@ -171,12 +177,12 @@ export default function Home() {
         </div>
 
         <div className="collection-grid">
-          <div className="coll-card tall"><img src="/assets/images/white_dog.png" alt="" /><span className="coll-tag">In-Home Sit</span></div>
-          <div className="coll-card"><img src="/assets/images/collie_ball.png" alt="" /><span className="coll-tag">Dog Walk</span></div>
-          <div className="coll-card"><img src="/assets/images/stripped_cat.png" alt="" /><span className="coll-tag">Drop-In</span></div>
-          <div className="coll-card"><img src="/assets/images/pitbull_lay.png" alt="" /><span className="coll-tag">Overnight</span></div>
-          <div className="coll-card wide"><img src="/assets/images/two_happy_dogs.png" alt="" /><span className="coll-tag">Pack Walk</span></div>
-          <div className="coll-card"><img src="/assets/images/Mekyla_Dark_dog.png" alt="" /><span className="coll-tag">Enrichment</span></div>
+          <div className="coll-card tall"><img src="/assets/images/white_dog.png" alt="White dog relaxing at home during an in-home pet sitting visit in Denver" /><span className="coll-tag">In-Home Sit</span></div>
+          <div className="coll-card"><img src="/assets/images/collie_ball.png" alt="Collie playing fetch on a dog walk in Denver" /><span className="coll-tag">Dog Walk</span></div>
+          <div className="coll-card"><img src="/assets/images/stripped_cat.png" alt="Striped tabby cat during a drop-in visit with Prism Paws" /><span className="coll-tag">Drop-In</span></div>
+          <div className="coll-card"><img src="/assets/images/pitbull_lay.png" alt="Relaxed pitbull during an overnight pet sitting stay in Denver" /><span className="coll-tag">Overnight</span></div>
+          <div className="coll-card wide"><img src="/assets/images/two_happy_dogs.png" alt="Two happy dogs on a pack walk in Denver with Prism Paws Pet Care" /><span className="coll-tag">Pack Walk</span></div>
+          <div className="coll-card"><img src="/assets/images/Mekyla_Dark_dog.png" alt="Dark-coated dog enjoying enrichment play session with Prism Paws" /><span className="coll-tag">Enrichment</span></div>
         </div>
       </section>
 

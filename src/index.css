@@ -1916,10 +1916,12 @@ h1, h2, h3, h4 {
 }
 .form-field textarea { resize: vertical; min-height: 120px; }
 .service-pills {
-  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  display: flex; flex-wrap: wrap; gap: 0.625rem;
 }
 .service-pills input { display: none; }
 .service-pills label {
+  display: inline-block;
+  line-height: 1.2;
   background: var(--cream);
   border: 2px solid var(--cream-line);
   border-radius: var(--r-pill);

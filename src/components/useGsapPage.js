@@ -64,7 +64,7 @@ export function useGsapPage(scopeRef, intro) {
       ];
       groups.forEach((sel) => {
         const grid = root.querySelector(sel);
-        if (!grid) return;
+        if (!grid || grid.children.length === 0) return;
         gsap.from(grid.children, {
           opacity: 0, y: 40, duration: 0.7, stagger: 0.1, ease: 'power2.out',
           scrollTrigger: { trigger: grid, start: 'top 85%' },

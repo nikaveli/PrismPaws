@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
+import Seo from '../components/Seo.jsx';
 
 export default function About() {
   const scope = useRef(null);
@@ -50,6 +51,11 @@ export default function About() {
 
   return (
     <main ref={scope}>
+      <Seo
+        title="In-Home Pet Sitter Denver, CO | About"
+        description="Meet Prism Paws Pet Care — Denver's trusted in-home pet sitter. Fully insured, background-checked & genuinely pet-obsessed. Your pet's new favorite human."
+        path="/about"
+      />
       {/* HERO */}
       <section className="subpage-hero">
         <span className="floating-paw" style={{ top: '15%', left: '8%' }}>🐾</span>
@@ -102,10 +108,10 @@ export default function About() {
           </div>
           <div className="about-photo-stack gsap-right">
             <div className="about-photo a1">
-              <img src="/assets/images/Mekyla_white_dog.png" alt="Sitter with dog" />
+              <img src="/assets/images/Mekyla_white_dog.png" alt="Prism Paws pet sitter with a white dog during an in-home visit in Denver" />
             </div>
             <div className="about-photo a2">
-              <img src="/assets/images/grey_cat_body.png" alt="Sitter with cat" />
+              <img src="/assets/images/grey_cat_body.png" alt="Grey cat receiving attentive care during a Prism Paws drop-in visit" />
             </div>
             <div className="about-sticker">
               <div className="circle-badge" style={{ width: 130, height: 130, background: 'var(--deep-pink)' }}>
@@ -187,7 +193,7 @@ export default function About() {
               </div>
               <div className="ps-number">{String(i + 1).padStart(2, '0')}</div>
               <div className="ps-image">
-                <img src={p.photo} alt={p.title} />
+                <img src={p.photo} alt={p.alt || p.title} />
               </div>
             </div>
           ))}
@@ -289,12 +295,12 @@ const VALUES = [
 ];
 
 const PROCESS = [
-  { title: 'We Arrive Ready', desc: "Every visit starts with a quick read of the pet — energy level, mood, appetite. We don't assume today looks like yesterday. Pets change. We pay attention.", photo: '/assets/images/blue_eye_dog.png' },
-  { title: 'We Follow The Routine Exactly', desc: 'The feeding schedule, the medication timing, the specific way the water bowl gets refilled — we follow the routine like we wrote it ourselves.', photo: '/assets/images/lab_dog.png' },
-  { title: 'We Document Everything', desc: "Photos and videos go out during or right after every visit. Not because you asked — because you shouldn't have to. Peace of mind is part of the service.", photo: '/assets/images/collie_laying.png' },
-  { title: 'We Adapt In The Moment', desc: "Anxious day? We slow down. Extra zoomies? We lean in. Medication refusal? We figure it out. We don't follow a script — we read the room.", photo: '/assets/images/two_dogs.png' },
-  { title: 'We Leave Things Right', desc: 'The litter scooped the way you like it. The blinds back how they were. The paw wipe done before your dog hits the couch. We notice what matters to you.', photo: '/assets/images/white_dog_standing.png' },
-  { title: 'We Lock The Door Twice', desc: "Because we'd never assume we got it right the first time. Your home, your pet, and your trust don't get treated casually.", photo: '/assets/images/whiteLab_standing.png' },
+  { title: 'We Arrive Ready', alt: 'Blue-eyed dog greeting a Denver pet sitter at the start of a visit', desc: "Every visit starts with a quick read of the pet — energy level, mood, appetite. We don't assume today looks like yesterday. Pets change. We pay attention.", photo: '/assets/images/blue_eye_dog.png' },
+  { title: 'We Follow The Routine Exactly', alt: 'Yellow lab being fed on schedule during an in-home pet sitting visit in Denver', desc: 'The feeding schedule, the medication timing, the specific way the water bowl gets refilled — we follow the routine like we wrote it ourselves.', photo: '/assets/images/lab_dog.png' },
+  { title: 'We Document Everything', alt: 'Collie resting comfortably during a Prism Paws overnight pet sitting stay', desc: "Photos and videos go out during or right after every visit. Not because you asked — because you shouldn't have to. Peace of mind is part of the service.", photo: '/assets/images/collie_laying.png' },
+  { title: 'We Adapt In The Moment', alt: 'Two dogs playing together during an enrichment session with Prism Paws', desc: "Anxious day? We slow down. Extra zoomies? We lean in. Medication refusal? We figure it out. We don't follow a script — we read the room.", photo: '/assets/images/two_dogs.png' },
+  { title: 'We Leave Things Right', alt: 'White dog standing calmly after a Denver dog walking visit', desc: 'The litter scooped the way you like it. The blinds back how they were. The paw wipe done before your dog hits the couch. We notice what matters to you.', photo: '/assets/images/white_dog_standing.png' },
+  { title: 'We Lock The Door Twice', alt: 'White Labrador standing by the front door after a responsible in-home pet care visit', desc: "Because we'd never assume we got it right the first time. Your home, your pet, and your trust don't get treated casually.", photo: '/assets/images/whiteLab_standing.png' },
 ];
 
 const NOTES = [
