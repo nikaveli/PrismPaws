@@ -85,7 +85,7 @@ export default function Services() {
             <div className={`svc-photo-wrap ${svc.color} gsap-scale`}>
               <span className="svc-photo-tag">{svc.tag}</span>
               <span className="svc-photo-emoji">{svc.emoji}</span>
-              <img src={svc.photo} alt={svc.alt || svc.title} />
+              <img src={svc.photo} alt={svc.alt || svc.title} style={svc.photoStyle} />
             </div>
             <div className="svc-content gsap-up">
               <div className="eyebrow">{svc.eyebrow}</div>
@@ -238,6 +238,7 @@ const SERVICES = [
     tag: 'In-Home Sit',
     emoji: '🏠',
     photo: '/assets/images/chewy_2.png',
+    photoStyle: { bottom: '-21%' },
     copy: "Keeping pets in their own home means less stress, better behavior, and actual sleep — for everyone. Ideal for cats who hate boarding, dogs with separation anxiety, senior pets on strict routines, or multi-pet households where a kennel just isn't realistic.",
     tiers: [
       { name: 'Overnight Stay', duration: '7pm–7am', price: '$95–$110' },
