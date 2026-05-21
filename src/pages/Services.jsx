@@ -232,12 +232,12 @@ const SERVICES = [
   {
     anchor: 'in-home',
     title: 'We Come To Them.',
-    alt: 'White Labrador standing calmly at home during an overnight in-home pet sitting visit in Denver',
+    alt: 'Chewy the miniature pinscher mix close-up portrait during an in-home pet sitting visit in Denver',
     eyebrow: 'In-Home Pet Sitting',
     color: 'purple',
     tag: 'In-Home Sit',
     emoji: '🏠',
-    photo: '/assets/images/whiteLab_standing.png',
+    photo: '/assets/images/chewy_2.png',
     copy: "Keeping pets in their own home means less stress, better behavior, and actual sleep — for everyone. Ideal for cats who hate boarding, dogs with separation anxiety, senior pets on strict routines, or multi-pet households where a kennel just isn't realistic.",
     tiers: [
       { name: 'Overnight Stay', duration: '7pm–7am', price: '$95–$110' },
