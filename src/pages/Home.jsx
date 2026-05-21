@@ -82,7 +82,7 @@ export default function Home() {
                   <path id="heroCirclePath" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
                 </defs>
                 <text>
-                  <textPath href="#heroCirclePath" startOffset="0">PET OBSESSED · TRUSTED CARE · PET OBSESSED ·</textPath>
+                  <textPath href="#heroCirclePath" startOffset="0">PET OBSESSED · TRUSTED CARE ·</textPath>
                 </text>
               </svg>
             </div>
