@@ -13,6 +13,7 @@ build/
 ._*
 .idea/
 .vscode/
+.claude/
 
 # Logs
 *.log
