@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
-import Seo from '../components/Seo.jsx';
+import Seo, { breadcrumb, faqPage } from '../components/Seo.jsx';
 
 const SERVICE_OPTIONS = [
   'In-Home Sit',
@@ -81,6 +81,10 @@ export default function Contact() {
         title="Book a Pet Sitter | Free Meet & Greet"
         description="Book a free meet & greet with Prism Paws Pet Care in Denver, CO. Same-day response guaranteed. Call/text (720) 289-1134 or DM @PrismPawsPetCare."
         path="/contact"
+        jsonLd={[
+          breadcrumb([['Contact', '/contact']]),
+          faqPage(FAQS),
+        ]}
       />
       {/* HERO */}
       <section className="subpage-hero">
@@ -308,7 +312,7 @@ export default function Contact() {
               </div>
               <div className="ps-number">{String(i + 1).padStart(2, '0')}</div>
               <div className="ps-image">
-                <img src={s.photo} alt={s.alt || s.title} />
+                <img src={s.photo} alt={s.alt || s.title} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

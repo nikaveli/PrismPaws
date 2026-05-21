@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
-import Seo from '../components/Seo.jsx';
+import Seo, { breadcrumb } from '../components/Seo.jsx';
 
 export default function About() {
   const scope = useRef(null);
@@ -55,6 +55,7 @@ export default function About() {
         title="In-Home Pet Sitter Denver, CO | About"
         description="Meet Prism Paws Pet Care — Denver's trusted in-home pet sitter. Fully insured, background-checked & genuinely pet-obsessed. Your pet's new favorite human."
         path="/about"
+        jsonLd={breadcrumb([['About', '/about']])}
       />
       {/* HERO */}
       <section className="subpage-hero">
@@ -108,10 +109,10 @@ export default function About() {
           </div>
           <div className="about-photo-stack gsap-right">
             <div className="about-photo a1">
-              <img src="/assets/images/Mekyla_white_dog.png" alt="Prism Paws pet sitter with a white dog during an in-home visit in Denver" />
+              <img src="/assets/images/Mekyla_white_dog.png" alt="Prism Paws pet sitter with a white dog during an in-home visit in Denver" loading="lazy" decoding="async" />
             </div>
             <div className="about-photo a2">
-              <img src="/assets/images/grey_cat_body.png" alt="Grey cat receiving attentive care during a Prism Paws drop-in visit" />
+              <img src="/assets/images/grey_cat_body.png" alt="Grey cat receiving attentive care during a Prism Paws drop-in visit" loading="lazy" decoding="async" />
             </div>
             <div className="about-sticker">
               <div className="circle-badge" style={{ width: 130, height: 130, background: 'var(--deep-pink)' }}>
@@ -193,7 +194,7 @@ export default function About() {
               </div>
               <div className="ps-number">{String(i + 1).padStart(2, '0')}</div>
               <div className="ps-image">
-                <img src={p.photo} alt={p.alt || p.title} />
+                <img src={p.photo} alt={p.alt || p.title} loading="lazy" decoding="async" />
               </div>
             </div>
           ))}

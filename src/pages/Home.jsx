@@ -101,7 +101,7 @@ export default function Home() {
       <section className="feature-row">
         <div className="feature-grid">
           <div className="feature-card gsap-up">
-            <img className="fc-photo" src="/assets/images/lab_dog.png" alt="Yellow lab dog receiving in-home pet care in Denver" />
+            <img className="fc-photo" src="/assets/images/lab_dog.png" alt="Yellow lab dog receiving in-home pet care in Denver" loading="lazy" decoding="async" />
             <div className="fc-content">
               <h3>Learn How We Care For Your Pet</h3>
               <p>Every visit follows your pet's routine. We adapt to feeding times, meds, walks and personality.</p>
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
 
           <div className="feature-card gsap-up">
-            <img className="fc-photo" src="/assets/images/grey_cat_body.png" alt="Grey cat receiving medication during a drop-in visit" />
+            <img className="fc-photo" src="/assets/images/grey_cat_body.png" alt="Grey cat receiving medication during a drop-in visit" loading="lazy" decoding="async" />
             <div className="fc-content">
               <h3>Basic Nutrition &amp; Med Care</h3>
               <p>Meds, oral or injectable, given on schedule with a confirmation photo every time.</p>
@@ -159,8 +159,8 @@ export default function Home() {
             </ul>
           </div>
           <div className="serve-photos gsap-right">
-            <div className="serve-photo p1"><img src="/assets/images/Mekyla_white_dog.png" alt="Prism Paws sitter with a white dog during an in-home pet sitting visit" /></div>
-            <div className="serve-photo p2"><img src="/assets/images/pitbull.png" alt="Pitbull mix on a dog walk in Denver with Prism Paws Pet Care" /></div>
+            <div className="serve-photo p1"><img src="/assets/images/Mekyla_white_dog.png" alt="Prism Paws sitter with a white dog during an in-home pet sitting visit" loading="lazy" decoding="async" /></div>
+            <div className="serve-photo p2"><img src="/assets/images/pitbull.png" alt="Pitbull mix on a dog walk in Denver with Prism Paws Pet Care" loading="lazy" decoding="async" /></div>
           </div>
         </div>
       </section>
@@ -177,12 +177,12 @@ export default function Home() {
         </div>
 
         <div className="collection-grid">
-          <div className="coll-card tall"><img src="/assets/images/white_dog.png" alt="White dog relaxing at home during an in-home pet sitting visit in Denver" /><span className="coll-tag">In-Home Sit</span></div>
-          <div className="coll-card"><img src="/assets/images/collie_ball.png" alt="Collie playing fetch on a dog walk in Denver" /><span className="coll-tag">Dog Walk</span></div>
-          <div className="coll-card"><img src="/assets/images/stripped_cat.png" alt="Striped tabby cat during a drop-in visit with Prism Paws" /><span className="coll-tag">Drop-In</span></div>
-          <div className="coll-card"><img src="/assets/images/pitbull_lay.png" alt="Relaxed pitbull during an overnight pet sitting stay in Denver" /><span className="coll-tag">Overnight</span></div>
-          <div className="coll-card wide"><img src="/assets/images/two_happy_dogs.png" alt="Two happy dogs on a pack walk in Denver with Prism Paws Pet Care" /><span className="coll-tag">Pack Walk</span></div>
-          <div className="coll-card"><img src="/assets/images/Mekyla_Dark_dog.png" alt="Dark-coated dog enjoying enrichment play session with Prism Paws" /><span className="coll-tag">Enrichment</span></div>
+          <div className="coll-card tall"><img src="/assets/images/white_dog.png" alt="White dog relaxing at home during an in-home pet sitting visit in Denver" loading="lazy" decoding="async" /><span className="coll-tag">In-Home Sit</span></div>
+          <div className="coll-card"><img src="/assets/images/collie_ball.png" alt="Collie playing fetch on a dog walk in Denver" loading="lazy" decoding="async" /><span className="coll-tag">Dog Walk</span></div>
+          <div className="coll-card"><img src="/assets/images/stripped_cat.png" alt="Striped tabby cat during a drop-in visit with Prism Paws" loading="lazy" decoding="async" /><span className="coll-tag">Drop-In</span></div>
+          <div className="coll-card"><img src="/assets/images/pitbull_lay.png" alt="Relaxed pitbull during an overnight pet sitting stay in Denver" loading="lazy" decoding="async" /><span className="coll-tag">Overnight</span></div>
+          <div className="coll-card wide"><img src="/assets/images/two_happy_dogs.png" alt="Two happy dogs on a pack walk in Denver with Prism Paws Pet Care" loading="lazy" decoding="async" /><span className="coll-tag">Pack Walk</span></div>
+          <div className="coll-card"><img src="/assets/images/Mekyla_Dark_dog.png" alt="Dark-coated dog enjoying enrichment play session with Prism Paws" loading="lazy" decoding="async" /><span className="coll-tag">Enrichment</span></div>
         </div>
       </section>
 

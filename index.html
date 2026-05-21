@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <link rel="icon" type="image/png" href="/assets/images/PRISM_PAWS_BADGE.png" />
-  <meta name="theme-color" content="#814DAA" />
+  <link rel="apple-touch-icon" href="/assets/images/PRISM_PAWS_BADGE.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#4169E1" />
+  <meta name="msapplication-TileColor" content="#4169E1" />
 
-  <!-- Static fallbacks for no-JS crawlers; react-helmet-async manages these at runtime -->
-  <title>Prism Paws Pet Care | Pet Sitting &amp; Dog Walking Denver, CO</title>
-  <meta name="description" content="Concierge-level in-home pet sitting, dog walks &amp; drop-in visits in Denver, CO. Insured, background-checked &amp; pet-obsessed. Book a free meet &amp; greet." />
+  <!-- Title + description are managed per-route by Seo.jsx via react-helmet-async.
+       Modern crawlers (Google, Bing) execute JS, so omitting static fallbacks
+       prevents duplicate <title>/<meta name="description"> tags. -->
 
   <!-- Static OG/Twitter properties that don't vary per page -->
   <meta property="og:type"      content="website" />
@@ -60,6 +64,16 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enrichment & TLC", "description": "Sensory play, light massage, and training reinforcement for pets in Denver, CO." } }
       ]
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Prism Paws Pet Care",
+    "url": "https://www.yourpetsfavoritehuman.com",
+    "inLanguage": "en-US",
+    "publisher": { "@type": "Organization", "name": "Prism Paws Pet Care" }
   }
   </script>
 </head>

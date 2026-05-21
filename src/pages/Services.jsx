@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { useGsapPage } from '../components/useGsapPage.js';
 import FinalCTA from '../components/FinalCTA.jsx';
 import HeroVideoLoop from '../components/HeroVideoLoop.jsx';
-import Seo from '../components/Seo.jsx';
+import Seo, { breadcrumb, faqPage } from '../components/Seo.jsx';
 
 export default function Services() {
   const scope = useRef(null);
@@ -38,6 +38,10 @@ export default function Services() {
         title="Pet Care Services & Pricing | Denver"
         description="All pet care services & pricing — overnight stays ($95–$225), dog walks ($32–$52), drop-in visits ($25–$52), enrichment & monthly bundles. Serving Denver, CO."
         path="/services"
+        jsonLd={[
+          breadcrumb([['Services', '/services']]),
+          faqPage(FAQS),
+        ]}
       />
       {/* HERO — full-bleed video */}
       <section className="subpage-hero subpage-hero-video">
@@ -85,7 +89,7 @@ export default function Services() {
             <div className={`svc-photo-wrap ${svc.color} gsap-scale`}>
               <span className="svc-photo-tag">{svc.tag}</span>
               <span className="svc-photo-emoji">{svc.emoji}</span>
-              <img src={svc.photo} alt={svc.alt || svc.title} />
+              <img src={svc.photo} alt={svc.alt || svc.title} loading="lazy" decoding="async" />
             </div>
             <div className="svc-content gsap-up">
               <div className="eyebrow">{svc.eyebrow}</div>

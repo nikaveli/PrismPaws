@@ -50,6 +50,26 @@ html {
   scroll-behavior: smooth;
   overflow-x: clip;
 }
+
+/* Skip-to-content link — accessibility/SEO. Visually hidden until focused. */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--r-pill);
+  background: var(--surface-dark);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 2px solid var(--golden-yellow);
+  outline-offset: 2px;
+}
 body {
   font-family: 'Quicksand', 'Inter', system-ui, sans-serif;
   background: var(--cream);
