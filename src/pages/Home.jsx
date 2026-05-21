@@ -110,7 +110,7 @@ export default function Home() {
                   <textPath href="#fcPath1" startOffset="0">FROM · MONTHLY · CARE PLANS ·</textPath>
                 </text>
               </svg>
-              <div className="stamp-num">$250</div>
+              <div className="stamp-num">$240</div>
               <div className="stamp-label">/ month</div>
             </div>
           </div>

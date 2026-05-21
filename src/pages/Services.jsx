@@ -237,10 +237,9 @@ const SERVICES = [
     photo: '/assets/images/whiteLab_standing.png',
     copy: "Keeping pets in their own home means less stress, better behavior, and actual sleep — for everyone. Ideal for cats who hate boarding, dogs with separation anxiety, senior pets on strict routines, or multi-pet households where a kennel just isn't realistic.",
     tiers: [
-      { name: 'Standard Stay', duration: '4 hrs', price: '$55' },
-      { name: 'Full Day Stay', duration: '8 hrs', price: '$95' },
-      { name: 'Overnight Stay', duration: '12+ hrs', price: '$150' },
-      { name: 'Multi-Day Package', duration: '2+ days', price: '$100/day' },
+      { name: 'Overnight Stay', duration: '7pm–7am', price: '$95–$110' },
+      { name: 'Extended Overnight', duration: 'Early arrival', price: '$125–$145' },
+      { name: '24-Hour Care', duration: 'Full day + night', price: '$175–$225' },
     ],
     includes: ['Routine respected', 'Feed + meds', 'Photo/video updates', 'Door locked twice'],
   },
@@ -254,9 +253,10 @@ const SERVICES = [
     photo: '/assets/images/stripped_cat.png',
     copy: "Perfect for working professionals, single-pet households, and cat parents who want eyes on their animal while traveling. We get in, we check everything, we make your pet's day — and we send you the proof.",
     tiers: [
-      { name: 'Quick Drop-In', duration: '20 min', price: '$30' },
-      { name: 'Standard Drop-In', duration: '30 min', price: '$35' },
-      { name: 'Extended Visit', duration: '45–60 min', price: '$50' },
+      { name: 'Quick Drop-In', duration: '20 min', price: '$25' },
+      { name: 'Standard Drop-In', duration: '30 min', price: '$32' },
+      { name: 'Extended Visit', duration: '45 min', price: '$42' },
+      { name: 'Full Visit', duration: '60 min', price: '$52' },
     ],
     includes: ['Food + water', 'Litter scoop', 'Cuddles included', 'Photo updates'],
   },
@@ -270,9 +270,9 @@ const SERVICES = [
     photo: '/assets/images/collie_ball.png',
     copy: "We don't drag, rush, or pile incompatible dogs together. Pack walks are small and curated — only dogs that actually get along walk together. Every walk respects the dog's personality, whether that means sniffing every single tree or hitting a longer route at a faster clip.",
     tiers: [
-      { name: 'Standard Walk', duration: '30 min', price: '$30' },
-      { name: 'Extended Walk', duration: '60 min', price: '$50' },
-      { name: 'Pack Walk', duration: '30–60 min', price: '$20–25/dog' },
+      { name: 'Standard Walk', duration: '30 min', price: '$32' },
+      { name: 'Extended Walk', duration: '60 min', price: '$52' },
+      { name: 'Pack Walk', duration: '30–60 min', price: '$22/dog' },
     ],
     includes: ['Leash-positive', 'Paw wipe', 'Fresh water', 'Temperament matched'],
   },
@@ -296,11 +296,13 @@ const SERVICES = [
 ];
 
 const ADDONS = [
+  { icon: '🐕', name: 'Additional Pet', price: '+$8 to +$10 per visit', desc: 'Multi-pet households welcome. Scaled by species and care level. The whole crew deserves love.' },
   { icon: '💊', name: 'Medication', price: '$5–$10 per visit', desc: 'Oral/topical at $5. Injectables or complex multi-med schedules at $10. Confirmation photo of every dose.' },
-  { icon: '🐕', name: 'Extra Pet', price: 'Scaled to species', desc: 'Multi-pet households get discounted bundle pricing on request. The whole crew deserves love.' },
+  { icon: '🎉', name: 'Holiday Fee', price: '+$10–$25 visit · +$30–$50 overnight', desc: 'Applies on major holidays (Thanksgiving, Christmas, New Year, etc.). Helps cover demand and your sitter\'s holiday time.' },
+  { icon: '👋', name: 'Meet & Greet', price: 'Free · or $20 credit', desc: 'First intro visit is free. Prefer to confirm? Pay $20 up front and we credit it back on your first booking.' },
   { icon: '🌙', name: 'Late / Early', price: '+$15 per visit', desc: 'Any service before 6am or after 10pm. For tight travel schedules and pets with late-night meds.' },
-  { icon: '📸', name: 'Photo & Video', price: '+$5 per visit', desc: 'Mini photo dump or short clip sent during or right after every visit. Already included on Full Day Stays.' },
-  { icon: '🗺️', name: 'Travel Fee', price: '$15–$20 per trip', desc: 'For addresses 30+ minutes from base. Quoted up front — no surprises, ever.' },
+  { icon: '📸', name: 'Photo & Video', price: '+$5 per visit', desc: 'Mini photo dump or short clip sent during or right after every visit. Already included on overnight stays.' },
+  { icon: '🔑', name: 'Key Pickup/Drop-Off', price: '$15–$20', desc: 'Optional key exchange before the first visit so we have access. Skip if you have a smart lock or lockbox.' },
   { icon: '🌿', name: 'Plant + Mail', price: '+$5 per visit', desc: 'Plant watering, mail collection, and blinds adjustments while we are already in the home.' },
 ];
 
@@ -314,18 +316,18 @@ const TLC = [
 const BUNDLES = [
   {
     name: 'Purr & Paw', subtitle: 'Best for cat parents & single-dog homes',
-    price: '$250',
+    price: '$240',
     includes: ['8 drop-in visits per month', 'Priority booking access', 'Locked-in availability', 'Monthly recap card'],
   },
   {
     name: 'High Note', subtitle: 'Working pros with active dogs',
-    price: '$500', featured: true,
+    price: '$440', featured: true,
     includes: ['12 dog walks (30 or 60 min)', 'Same sitter every time', 'Priority booking access', 'Monthly recap card'],
   },
   {
     name: 'Full Prism', subtitle: 'All-access flexible coverage',
-    price: '$1,200',
-    includes: ['5 in-home sits any duration', '10 drop-in visits', 'Priority + locked availability', 'Concierge-level comms'],
+    price: '$850',
+    includes: ['5 overnight stays any tier', '10 drop-in visits', 'Priority + locked availability', 'Concierge-level comms'],
   },
 ];
 
@@ -333,8 +335,8 @@ const FAQS = [
   { q: 'How do I book a visit?', a: 'DM us on Instagram @PrismPawsPetCare, send a text/call, or use the contact form. First-time clients get a free meet-and-greet so your pet can approve us before any paid visit is scheduled.' },
   { q: 'What areas do you service?', a: 'We cover Denver and surrounding areas. A travel fee of $15–$20 applies for addresses 30+ minutes from base. Always quoted upfront — no surprises.' },
   { q: 'Can you handle pets with special medical needs?', a: 'Yes. We administer oral, topical, and injectable medications with full documentation. Every dose gets a confirmation photo. For complex multi-med schedules we discuss your pet\'s protocol during the meet-and-greet.' },
-  { q: 'How do I know my pet is okay while I am away?', a: 'Photo and video updates are standard on Full Day Stays and available as a $5 add-on for any visit. You\'ll hear from us during or right after every booking — no news blackouts.' },
+  { q: 'How do I know my pet is okay while I am away?', a: 'Photo and video updates are standard on overnight stays and available as a $5 add-on for any visit. You\'ll hear from us during or right after every booking — no news blackouts.' },
   { q: 'Are you insured?', a: 'Yes. Prism Paws is fully insured and background-checked. Your home and your pet deserve professional-grade accountability — proof is available on request.' },
-  { q: 'What if I have multiple pets?', a: 'Multi-pet households are welcome. Extra pet charges are scaled by species and care level, and bundle pricing is available for households with multiple animals.' },
+  { q: 'What if I have multiple pets?', a: 'Multi-pet households are welcome. Additional pets are +$8 to +$10 per visit, scaled by species and care level. Bundle pricing is available for households with multiple animals.' },
   { q: 'How do pack walks work?', a: 'Pack walks are kept small and curated — only dogs that genuinely get along in energy and temperament walk together. We\'d rather walk two compatible dogs than rush a third one into the mix.' },
 ];
