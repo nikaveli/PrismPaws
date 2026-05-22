@@ -175,7 +175,7 @@ export default function Contact() {
               <a href="https://www.facebook.com/profile.php?id=61590532222534" target="_blank" rel="noopener noreferrer" className="social-pill">
                 <span>📘</span> Facebook
               </a>
-              <a href="#" className="social-pill" aria-disabled="true">
+              <a href="https://www.tiktok.com/@yourpetsfavoritehuman" target="_blank" rel="noopener noreferrer" className="social-pill">
                 <span>🎵</span> TikTok
               </a>
             </div>
