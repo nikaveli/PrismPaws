@@ -79,7 +79,7 @@ export default function Contact() {
     <main ref={scope}>
       <Seo
         title="Book a Pet Sitter | Free Meet & Greet"
-        description="Book a free meet & greet with Prism Paws Pet Care in Denver, CO. Same-day response guaranteed. Call/text (720) 289-1134 or DM @PrismPawsPetCare."
+        description="Book a free meet & greet with Prism Paws Pet Care in Denver, CO. Same-day response guaranteed. Call/text (720) 289-1134 or DM @yourpetsfavoritehuman."
         path="/contact"
         jsonLd={[
           breadcrumb([['Contact', '/contact']]),
@@ -112,7 +112,7 @@ export default function Contact() {
               justifyContent: 'center',
             }}
           >
-            <a href="https://instagram.com/PrismPawsPetCare" className="btn btn-primary">
+            <a href="https://www.instagram.com/yourpetsfavoritehuman" className="btn btn-primary">
               DM On Instagram <span className="btn-icon">→</span>
             </a>
             <a href="#contact-form" className="btn btn-ghost">Use The Form</a>
@@ -149,7 +149,7 @@ export default function Contact() {
                 <div className="c-icon">📸</div>
                 <div>
                   <div className="c-label">Instagram (Fastest)</div>
-                  <div className="c-value"><a href="https://instagram.com/PrismPawsPetCare">@PrismPawsPetCare</a></div>
+                  <div className="c-value"><a href="https://www.instagram.com/yourpetsfavoritehuman">@yourpetsfavoritehuman</a></div>
                 </div>
               </li>
               <li>
@@ -169,7 +169,7 @@ export default function Contact() {
             </ul>
 
             <div className="social-row">
-              <a href="https://instagram.com/PrismPawsPetCare" target="_blank" rel="noopener noreferrer" className="social-pill">
+              <a href="https://www.instagram.com/yourpetsfavoritehuman" target="_blank" rel="noopener noreferrer" className="social-pill">
                 <span>📸</span> Instagram
               </a>
               <a href="https://www.facebook.com/profile.php?id=61590532222534" target="_blank" rel="noopener noreferrer" className="social-pill">

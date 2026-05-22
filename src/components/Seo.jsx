@@ -54,7 +54,7 @@ export default function Seo({
 
       {/* Twitter card */}
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@PrismPawsPetCare" />
+      <meta name="twitter:site" content="@yourpetsfavoritehuman" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />

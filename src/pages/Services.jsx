@@ -344,7 +344,7 @@ const BUNDLES = [
 ];
 
 const FAQS = [
-  { q: 'How do I book a visit?', a: 'DM us on Instagram @PrismPawsPetCare, send a text/call, or use the contact form. First-time clients get a free meet-and-greet so your pet can approve us before any paid visit is scheduled.' },
+  { q: 'How do I book a visit?', a: 'DM us on Instagram @yourpetsfavoritehuman, send a text/call, or use the contact form. First-time clients get a free meet-and-greet so your pet can approve us before any paid visit is scheduled.' },
   { q: 'What areas do you service?', a: 'We cover Denver and surrounding areas. A travel fee of $15–$20 applies for addresses 30+ minutes from base. Always quoted upfront — no surprises.' },
   { q: 'Can you handle pets with special medical needs?', a: 'Yes. We administer oral, topical, and injectable medications with full documentation. Every dose gets a confirmation photo. For complex multi-med schedules we discuss your pet\'s protocol during the meet-and-greet.' },
   { q: 'How do I know my pet is okay while I am away?', a: 'Photo and video updates are standard on overnight stays and available as a $5 add-on for any visit. You\'ll hear from us during or right after every booking — no news blackouts.' },

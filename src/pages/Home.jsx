@@ -214,8 +214,8 @@ export default function Home() {
         title="Ready To Meet Your Pet's<br/><em>New Favorite Human?</em>"
         body="Start with a free meet-and-greet. No booking required, no pressure — just a chance for your pet to approve us first."
         primary="Book a Visit"
-        secondary="@PrismPawsPetCare"
-        secondaryHref="https://instagram.com/PrismPawsPetCare"
+        secondary="@yourpetsfavoritehuman"
+        secondaryHref="https://www.instagram.com/yourpetsfavoritehuman"
       />
     </main>
   );

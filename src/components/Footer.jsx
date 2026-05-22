@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Connect</h4>
             <ul>
-              <li><a href="https://instagram.com/PrismPawsPetCare" target="_blank" rel="noopener noreferrer">@PrismPawsPetCare</a></li>
+              <li><a href="https://www.instagram.com/yourpetsfavoritehuman" target="_blank" rel="noopener noreferrer">@yourpetsfavoritehuman</a></li>
               <li><a href="mailto:mekyla@yourpetsfavoritehuman.com">mekyla@yourpetsfavoritehuman.com</a></li>
               <li><a href="tel:+17202891134">(720) 289-1134</a></li>
               <li><Link to="/contact#contact-form">Send a Note</Link></li>
