@@ -169,13 +169,13 @@ export default function Contact() {
             </ul>
 
             <div className="social-row">
-              <a href="https://instagram.com/PrismPawsPetCare" className="social-pill">
+              <a href="https://instagram.com/PrismPawsPetCare" target="_blank" rel="noopener noreferrer" className="social-pill">
                 <span>📸</span> Instagram
               </a>
-              <a href="#" className="social-pill">
+              <a href="https://www.facebook.com/profile.php?id=61590532222534" target="_blank" rel="noopener noreferrer" className="social-pill">
                 <span>📘</span> Facebook
               </a>
-              <a href="#" className="social-pill">
+              <a href="#" className="social-pill" aria-disabled="true">
                 <span>🎵</span> TikTok
               </a>
             </div>
