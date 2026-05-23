@@ -15,10 +15,18 @@ const SERVICE_OPTIONS = [
   'Not Sure Yet',
 ];
 
+// FormSubmit.co endpoint. AJAX variant returns JSON instead of redirecting,
+// which lets us keep the in-page React success state.
+// First submission triggers a confirmation email to the recipient — Mekyla
+// must click the activation link once, then all future submits flow through.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/mekyla@yourpetsfavoritehuman.com';
+
 export default function Contact() {
   const scope = useRef(null);
   const [services, setServices] = useState(['Drop-In Visit']);
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
   useGsapPage(scope, () => {
     gsap.fromTo('.hero-logo',
@@ -66,13 +74,56 @@ export default function Contact() {
     setServices((cur) => (cur.includes(name) ? cur.filter((s) => s !== name) : [...cur, name]));
   }
 
-  function onSubmit(e) {
+  async function onSubmit(e) {
     e.preventDefault();
-    setSent(true);
-    // Bounce the success card a little
-    requestAnimationFrame(() => {
-      gsap.from('.form-success', { y: -16, opacity: 0, duration: 0.6, ease: 'back.out(2)' });
-    });
+    setError(null);
+
+    // Honeypot — real users leave this empty. Bots fill every field.
+    // If it's filled, silently "succeed" and drop the submission.
+    const form = e.currentTarget;
+    if (form.elements._honey?.value) {
+      setSent(true);
+      return;
+    }
+
+    setSubmitting(true);
+
+    // Build payload from form fields + React-controlled service pills.
+    const data = new FormData(form);
+    data.append('services', services.join(', '));
+    // FormSubmit configuration:
+    data.append('_subject', `New Prism Paws inquiry — ${data.get('petname') || 'pet'}`);
+    data.append('_template', 'table');
+    data.append('_captcha', 'false');
+    data.append(
+      '_autoresponse',
+      `Hi ${data.get('name') || 'there'} — thanks for reaching out about ${data.get('petname') || 'your pet'}!\n\n` +
+        `I got your note and will be back in touch the same day to set up your free meet & greet. ` +
+        `In the meantime, if anything urgent comes up, text or call (720) 289-1134 or DM @yourpetsfavoritehuman on Instagram.\n\n` +
+        `Talk soon,\nMekyla — Prism Paws Pet Care`
+    );
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data,
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok || json.success === 'false') {
+        throw new Error(json.message || 'Submission failed');
+      }
+      setSent(true);
+      requestAnimationFrame(() => {
+        gsap.from('.form-success', { y: -16, opacity: 0, duration: 0.6, ease: 'back.out(2)' });
+      });
+    } catch (err) {
+      setError(
+        "Hmm — something went wrong sending that. Try again, or DM us on Instagram (@yourpetsfavoritehuman) or text (720) 289-1134."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -277,9 +328,41 @@ export default function Contact() {
                     </div>
                   </div>
 
+                  {/* Honeypot — must stay invisible to humans. Bots fill it; we drop the submission. */}
+                  <input
+                    type="text"
+                    name="_honey"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    aria-hidden="true"
+                    style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+                  />
+
+                  {error && (
+                    <div
+                      role="alert"
+                      style={{
+                        marginTop: '1rem',
+                        padding: '0.875rem 1rem',
+                        borderRadius: 'var(--r-sm)',
+                        background: '#fde9f3',
+                        border: '1px solid var(--deep-pink)',
+                        color: 'var(--deep-pink)',
+                        fontSize: '0.9rem',
+                      }}
+                    >
+                      {error}
+                    </div>
+                  )}
+
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginTop: '1.5rem' }}>
-                    <button type="submit" className="btn btn-primary">
-                      Send Note <span className="btn-icon">🐾</span>
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      disabled={submitting}
+                      style={{ opacity: submitting ? 0.7 : 1, cursor: submitting ? 'wait' : 'pointer' }}
+                    >
+                      {submitting ? 'Sending…' : 'Send Note'} <span className="btn-icon">🐾</span>
                     </button>
                     <p style={{ fontSize: '0.8rem', color: 'var(--muted)' }}>
                       Same-day response · Free meet-and-greet for new clients
