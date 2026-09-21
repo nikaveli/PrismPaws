@@ -86,7 +86,7 @@ export default function About() {
             <span className="trust-chip"><span className="icon green">🌿</span> Fully Insured</span>
             <span className="trust-chip"><span className="icon blue">🔒</span> Background Checked</span>
             <span className="trust-chip"><span className="icon purple">🐾</span> Pet Obsessed</span>
-            <span className="trust-chip"><span className="icon green">📸</span> Photo Updates Always</span>
+            <span className="trust-chip"><span className="icon green">📸</span> Free Photo Updates Always</span>
           </div>
         </div>
       </section>

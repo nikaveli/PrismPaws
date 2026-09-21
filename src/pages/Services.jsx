@@ -72,7 +72,8 @@ export default function Services() {
           >
             <span className="trust-chip light"><span className="icon green">🌿</span> Fully Insured</span>
             <span className="trust-chip light"><span className="icon blue">🔒</span> Background Checked</span>
-            <span className="trust-chip light"><span className="icon purple">📸</span> Photo Updates</span>
+            <span className="trust-chip light"><span className="icon purple">📸</span> Free Photo Updates</span>
+            <span className="trust-chip light"><span className="icon orange">👋</span> Free Meet &amp; Greet</span>
             <span className="trust-chip light"><span className="icon green">💊</span> Med Administration</span>
           </div>
         </div>
@@ -250,7 +251,7 @@ const SERVICES = [
       { name: 'Extended Overnight', duration: 'Early arrival', price: '$125–$145' },
       { name: '24-Hour Care', duration: 'Full day + night', price: '$175–$225' },
     ],
-    includes: ['Routine respected', 'Feed + meds', 'Photo/video updates', 'Door locked twice'],
+    includes: ['Routine respected', 'Feed + meds', 'Free photo/video updates', 'Door locked twice'],
   },
   {
     anchor: 'drop-ins',
@@ -268,7 +269,7 @@ const SERVICES = [
       { name: 'Extended Visit', duration: '45 min', price: '$42' },
       { name: 'Full Visit', duration: '60 min', price: '$52' },
     ],
-    includes: ['Food + water', 'Litter scoop', 'Cuddles included', 'Photo updates'],
+    includes: ['Food + water', 'Litter scoop', 'Cuddles included', 'Free photo/video updates'],
   },
   {
     anchor: 'walks',
@@ -285,7 +286,7 @@ const SERVICES = [
       { name: 'Extended Walk', duration: '60 min', price: '$52' },
       { name: 'Pack Walk', duration: '30–60 min', price: '$22/dog' },
     ],
-    includes: ['Leash-positive', 'Paw wipe', 'Fresh water', 'Temperament matched'],
+    includes: ['Leash-positive', 'Paw wipe', 'Fresh water', 'Free photo/video updates'],
   },
   {
     anchor: 'enrichment',
@@ -303,7 +304,7 @@ const SERVICES = [
       { name: 'Light Massage', duration: '20 min', price: '+$20' },
       { name: 'Training Reinforcement', duration: '20 min', price: '+$15' },
     ],
-    includes: ['Snuffle + lick mats', 'Senior friendly', 'Anxious pet calm', 'Post-surgery safe'],
+    includes: ['Snuffle + lick mats', 'Senior friendly', 'Free photo/video updates', 'Post-surgery safe'],
   },
 ];
 
@@ -311,9 +312,9 @@ const ADDONS = [
   { icon: '🐕', name: 'Additional Pet', price: '+$8 to +$10 per visit', desc: 'Multi-pet households welcome. Scaled by species and care level. The whole crew deserves love.' },
   { icon: '💊', name: 'Medication', price: '$5–$10 per visit', desc: 'Oral/topical at $5. Injectables or complex multi-med schedules at $10. Confirmation photo of every dose.' },
   { icon: '🎉', name: 'Holiday Fee', price: '+$10–$25 visit · +$30–$50 overnight', desc: 'Applies on major holidays (Thanksgiving, Christmas, New Year, etc.). Helps cover demand and your sitter\'s holiday time.' },
-  { icon: '👋', name: 'Meet & Greet', price: 'Free · or $20 credit', desc: 'First intro visit is free. Prefer to confirm? Pay $20 up front and we credit it back on your first booking.' },
+  { icon: '👋', name: 'Meet & Greet', price: 'FREE', desc: 'Every new client starts with a complimentary intro visit. No deposit, no booking fee, and no pressure.' },
   { icon: '🌙', name: 'Late / Early', price: '+$15 per visit', desc: 'Any service before 6am or after 10pm. For tight travel schedules and pets with late-night meds.' },
-  { icon: '📸', name: 'Photo & Video', price: '+$5 per visit', desc: 'Mini photo dump or short clip sent during or right after every visit. Already included on overnight stays.' },
+  { icon: '📸', name: 'Photo & Video Updates', price: 'FREE', desc: 'Photos and short clips are included with every visit and sent during or right after care. You never need to ask or pay extra.' },
   { icon: '🔑', name: 'Key Pickup/Drop-Off', price: '$15–$20', desc: 'Optional key exchange before the first visit so we have access. Skip if you have a smart lock or lockbox.' },
   { icon: '🌿', name: 'Plant + Mail', price: '+$5 per visit', desc: 'Plant watering, mail collection, and blinds adjustments while we are already in the home.' },
 ];
@@ -347,7 +348,7 @@ const FAQS = [
   { q: 'How do I book a visit?', a: 'DM us on Instagram @yourpetsfavoritehuman, send a text/call, or use the contact form. First-time clients get a free meet-and-greet so your pet can approve us before any paid visit is scheduled.' },
   { q: 'What areas do you service?', a: 'We cover Denver and surrounding areas. A travel fee of $15–$20 applies for addresses 30+ minutes from base. Always quoted upfront — no surprises.' },
   { q: 'Can you handle pets with special medical needs?', a: 'Yes. We administer oral, topical, and injectable medications with full documentation. Every dose gets a confirmation photo. For complex multi-med schedules we discuss your pet\'s protocol during the meet-and-greet.' },
-  { q: 'How do I know my pet is okay while I am away?', a: 'Photo and video updates are standard on overnight stays and available as a $5 add-on for any visit. You\'ll hear from us during or right after every booking — no news blackouts.' },
+  { q: 'How do I know my pet is okay while I am away?', a: 'Free photo and video updates are included with every visit. You\'ll hear from us during or right after every booking — no add-on fee and no news blackouts.' },
   { q: 'Are you insured?', a: 'Yes. Prism Paws is fully insured and background-checked. Your home and your pet deserve professional-grade accountability — proof is available on request.' },
   { q: 'What if I have multiple pets?', a: 'Multi-pet households are welcome. Additional pets are +$8 to +$10 per visit, scaled by species and care level. Bundle pricing is available for households with multiple animals.' },
   { q: 'How do pack walks work?', a: 'Pack walks are kept small and curated — only dogs that genuinely get along in energy and temperament walk together. We\'d rather walk two compatible dogs than rush a third one into the mix.' },

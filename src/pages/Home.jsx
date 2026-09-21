@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div className="hero-trust">
               <div className="trust-chip"><div className="icon blue">🛡</div> Fully Insured</div>
-              <div className="trust-chip"><div className="icon purple">📸</div> Photo Updates</div>
+              <div className="trust-chip"><div className="icon purple">📸</div> Free Photo Updates</div>
               <div className="trust-chip"><div className="icon green">🌿</div> Background Checked</div>
             </div>
           </div>
@@ -137,8 +137,8 @@ export default function Home() {
                   <textPath href="#fcPath2" startOffset="0">INCLUDED · WITH EVERY VISIT ·</textPath>
                 </text>
               </svg>
-              <div className="stamp-num">+$5</div>
-              <div className="stamp-label">per visit</div>
+              <div className="stamp-num">FREE</div>
+              <div className="stamp-label">every visit</div>
             </div>
           </div>
         </div>
