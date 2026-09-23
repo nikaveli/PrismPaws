@@ -1481,6 +1481,48 @@ h1, h2, h3, h4 {
 /* =========================================================
    PAGE: ABOUT
    ========================================================= */
+/* About hero: two-column with profile card on the right */
+.about-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+  max-width: 1180px;
+}
+.about-hero-inner .about-hero-text { text-align: center; }
+.about-hero-profile {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.about-hero-profile img {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--white);
+}
+.about-hero-profile figcaption {
+  font-family: var(--font-display, inherit);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 880px) {
+  .about-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .about-hero-profile { order: 2; }
+  .about-hero-profile img { max-width: 260px; }
+}
+
 .about-story {
   background: var(--cream);
   padding: 4rem 0;

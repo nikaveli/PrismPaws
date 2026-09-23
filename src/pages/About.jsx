@@ -63,31 +63,37 @@ export default function About() {
         <span className="floating-paw" style={{ top: '72%', left: '12%' }}>🐾</span>
         <span className="floating-paw" style={{ top: '20%', right: '12%' }}>🐾</span>
         <span className="floating-paw" style={{ top: '78%', right: '8%' }}>🐾</span>
-        <div className="subpage-hero-inner">
-          <img className="hero-logo" src="/assets/images/PRISM_PAWS_LOGO.png" alt="Prism Paws Pet Care" />
-          <div className="eyebrow center">Meet Prism Paws</div>
-          <h1>
-            <span className="word">The</span> <span className="word">sitter</span> <span className="word">your</span> <span className="word">pet</span><br />
-            <span className="word">brags</span> <span className="word">about</span> <span className="word"><em>to other pets.</em></span>
-          </h1>
-          <p>
-            Independent. Insured. Alt-friendly. Built for pet parents who can tell the difference between someone who just shows up and someone who actually gives a damn.
-          </p>
-          <div
-            className="trust-row"
-            style={{
-              marginTop: '2.5rem',
-              display: 'flex',
-              gap: '1.25rem',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-            }}
-          >
-            <span className="trust-chip"><span className="icon green">🌿</span> Fully Insured</span>
-            <span className="trust-chip"><span className="icon blue">🔒</span> Background Checked</span>
-            <span className="trust-chip"><span className="icon purple">🐾</span> Pet Obsessed</span>
-            <span className="trust-chip"><span className="icon green">📸</span> Free Photo Updates Always</span>
+        <div className="subpage-hero-inner about-hero-inner">
+          <div className="about-hero-text">
+            <img className="hero-logo" src="/assets/images/PRISM_PAWS_LOGO.png" alt="Prism Paws Pet Care" />
+            <div className="eyebrow center">Meet Prism Paws</div>
+            <h1>
+              <span className="word">The</span> <span className="word">sitter</span> <span className="word">your</span> <span className="word">pet</span><br />
+              <span className="word">brags</span> <span className="word">about</span> <span className="word"><em>to other pets.</em></span>
+            </h1>
+            <p>
+              Independent. Insured. Alt-friendly. Built for pet parents who can tell the difference between someone who just shows up and someone who actually gives a damn.
+            </p>
+            <div
+              className="trust-row"
+              style={{
+                marginTop: '2.5rem',
+                display: 'flex',
+                gap: '1.25rem',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+              }}
+            >
+              <span className="trust-chip"><span className="icon green">🌿</span> Fully Insured</span>
+              <span className="trust-chip"><span className="icon blue">🔒</span> Background Checked</span>
+              <span className="trust-chip"><span className="icon purple">🐾</span> Pet Obsessed</span>
+              <span className="trust-chip"><span className="icon green">📸</span> Free Photo Updates Always</span>
+            </div>
           </div>
+          <figure className="about-hero-profile">
+            <img src="/assets/images/mekyla_profile.webp" alt="Mekyla, founder of Prism Paws Pet Care, in a Denver park" loading="lazy" decoding="async" />
+            <figcaption>Mekyla</figcaption>
+          </figure>
         </div>
       </section>
 
