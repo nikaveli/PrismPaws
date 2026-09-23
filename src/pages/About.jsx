@@ -25,6 +25,14 @@ export default function About() {
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 0.8, delay: 1.05, ease: 'power2.out' },
     );
+    gsap.fromTo('.about-hero-profile img',
+      { opacity: 0, y: 60, rotate: 4 },
+      { opacity: 1, y: 0, rotate: 0, duration: 0.9, ease: 'power3.out', delay: 0.35 },
+    );
+    gsap.fromTo('.about-hero-profile figcaption',
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, delay: 1.05, ease: 'power2.out' },
+    );
 
     // Animate the value card icons with a tiny pop on scroll
     gsap.fromTo('.value-card .v-icon',
