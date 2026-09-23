@@ -1486,13 +1486,15 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
   gap: 3rem;
-  align-items: center;
+  align-items: start;
   text-align: left;
   max-width: 1180px;
 }
 .about-hero-inner .about-hero-text { text-align: center; }
 .about-hero-profile {
   margin: 0;
+  /* offset to align photo top with the "Meet Prism Paws" eyebrow (logo height + margin) */
+  margin-top: calc(160px + 1.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1505,7 +1507,7 @@ h1, h2, h3, h4 {
   object-fit: cover;
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-lg);
-  border: 4px solid var(--white);
+  border: 4px solid var(--vibrant-purple);
 }
 .about-hero-profile figcaption {
   font-family: var(--font-display, inherit);
@@ -1519,7 +1521,10 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .about-hero-profile { order: 2; }
+  .about-hero-profile {
+    order: 2;
+    margin-top: 0;
+  }
   .about-hero-profile img { max-width: 260px; }
 }
 
