@@ -76,8 +76,7 @@ export default function About() {
             <img className="hero-logo" src="/assets/images/PRISM_PAWS_LOGO.png" alt="Prism Paws Pet Care" />
             <div className="eyebrow center">Meet Prism Paws</div>
             <h1>
-              <span className="word">The</span> <span className="word">sitter</span> <span className="word">your</span> <span className="word">pet</span><br />
-              <span className="word">brags</span> <span className="word">about</span> <span className="word"><em>to other pets.</em></span>
+              <span className="word">The</span> <span className="word">sitter</span> <span className="word">your</span> <span className="word">pet</span> <span className="word">brags</span> <span className="word">about</span> <span className="word"><em>to other pets.</em></span>
             </h1>
             <p>
               Independent. Insured. Alt-friendly. Built for pet parents who can tell the difference between someone who just shows up and someone who actually gives a damn.
