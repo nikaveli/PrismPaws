@@ -311,7 +311,7 @@ const SERVICES = [
 const ADDONS = [
   { icon: '🐕', name: 'Additional Pet', price: '+$8 to +$10 per visit', desc: 'Multi-pet households welcome. Scaled by species and care level. The whole crew deserves love.' },
   { icon: '💊', name: 'Medication', price: '$5–$10 per visit', desc: 'Oral/topical at $5. Injectables or complex multi-med schedules at $10. Confirmation photo of every dose.' },
-  { icon: '🎉', name: 'Holiday Fee', price: '+$10–$25 visit · +$30–$50 overnight', desc: 'Applies on major holidays (Thanksgiving, Christmas, New Year, etc.). Helps cover demand and your sitter\'s holiday time.' },
+  { icon: '🎉', name: 'Holiday Fee', price: '$50', desc: 'Applies on major holidays (Thanksgiving, Christmas, New Year, etc.). Helps cover demand and your sitter\'s holiday time.' },
   { icon: '👋', name: 'Meet & Greet', price: 'FREE', desc: 'Every new client starts with a complimentary intro visit. No deposit, no booking fee, and no pressure.' },
   { icon: '🌙', name: 'Late / Early', price: '+$15 per visit', desc: 'Any service before 6am or after 10pm. For tight travel schedules and pets with late-night meds.' },
   { icon: '📸', name: 'Photo & Video Updates', price: 'FREE', desc: 'Photos and short clips are included with every visit and sent during or right after care. You never need to ask or pay extra.' },
