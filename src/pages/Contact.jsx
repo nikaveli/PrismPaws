@@ -19,7 +19,7 @@ const SERVICE_OPTIONS = [
 // which lets us keep the in-page React success state.
 // First submission triggers a confirmation email to the recipient — Mekyla
 // must click the activation link once, then all future submits flow through.
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/mekyla@yourpetsfavoritehuman.com';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/garciamekyla852@gmail.com';
 
 export default function Contact() {
   const scope = useRef(null);
@@ -193,7 +193,7 @@ export default function Contact() {
                 <div className="c-icon">✉️</div>
                 <div>
                   <div className="c-label">Email</div>
-                  <div className="c-value"><a href="mailto:mekyla@yourpetsfavoritehuman.com">mekyla@yourpetsfavoritehuman.com</a></div>
+                  <div className="c-value"><a href="mailto:garciamekyla852@gmail.com">garciamekyla852@gmail.com</a></div>
                 </div>
               </li>
               <li>
